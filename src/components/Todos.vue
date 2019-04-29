@@ -8,7 +8,7 @@
         </div> -->
 
         <div v-bind:key="todo.id" v-for="todo in todos">
-            <TodoItem />
+            <TodoItem v-bind:todo="todo" v-on:delete-todo="$emit('delete-todo', todo.id)"/>
         </div>
     </div>
 </template>
